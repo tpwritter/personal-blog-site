@@ -1,0 +1,63 @@
+//  main: ../style.less
+.add-post{
+    margin-bottom: 3rem;
+    box-shadow: 0 15px 25px rgba(@black, 45%);
+    background-color: @secondary;
+    border-radius: 5px;
+    padding: 1.5rem 2rem;
+
+    &__form{
+        display: flex;
+        align-items: center;
+        &-actions{
+            display: flex;
+            justify-content: flex-end;
+            width: 20%;
+        }
+    }
+}
+.add-post__textarea{
+    display: block;
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: @white;
+    width: 80%;
+    height: 2.6rem;
+    background: transparent;
+    border: none;
+    resize: none;
+
+    &::placeholder{
+        color: #d2d2d2;
+    }
+}
+.add-post__file{
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    background: #EBEBEB url("../img/add_photo.svg") center no-repeat;
+    cursor: pointer;
+    transition: background-color .2s linear;
+
+    input{
+        display: none;
+    }
+    &:hover{
+        background-color: darken(#EBEBEB, 5);
+    }
+}
+.add-post__send{
+    margin-left: 1.5rem;
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: @blue;
+    border: none;
+    transition: background-color .2s linear;
+    &:hover{
+        background-color: darken(@blue, 5);
+    }
+}

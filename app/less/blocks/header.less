@@ -1,0 +1,101 @@
+// main: ../style.less
+.header{
+    display: flex;
+    justify-content: space-between;
+    width:calc(100% - 300px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: @black_header;
+    box-shadow: 0 5px 22px rgba(#0000, 25);
+
+    &__right{
+        display:flex;
+        justify-content: flex-end;
+    }
+}
+.nav-list{
+    display: flex;
+}
+.nav__item{
+    transition: .2s linear;
+    position: relative;
+    &:hover{
+        .nav-link{
+            background-color: @blue;
+        }
+        >.subnav{
+            display: block;
+        }
+    }
+}
+.nav-link{
+    font-size: 11px;
+    display: block;
+    text-transform: uppercase;
+    color:@white;
+    text-decoration: none;
+    padding: 1.2rem 1.5rem;
+    transition: background-color .3s linear;
+
+    &.has-subnav{
+        position: relative;
+        padding-right: 3.4rem;
+        &:after{
+            content:"";
+            display: block;
+            border-style: solid;
+            margin-top: 0.5px;
+            border-width: 6px 5px 0 5px;
+            border-color: @white transparent transparent transparent;
+            position: absolute;
+            top: 50%;
+            right: 1.2rem;
+            transform: translateY(-50%);
+        }
+    }
+}
+.search{
+    background-color: @primary;
+    max-width: 21rem;
+    width: 100%;
+}
+.search__input{
+    display: block;
+    padding:1.2rem 2rem;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: @white;
+    width: 100%;
+
+
+    &::placeholder{
+        color: draken(@white, 60);
+    }
+}
+.subnav{
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 16.5rem;
+    background-color: @blue;
+    border-radius:0 0 5px 5px;
+    padding: 0.5rem 0;
+    box-shadow: 0 6px 8px rgba(#0000, 20);
+}
+.subnav__link{
+    display: block;
+    font-size: 1.2rem;
+    color: @white;
+    text-decoration: none;
+    padding:0.45rem 1.2rem;
+    transition: color .25s ease-in-out;
+
+    &:hover{
+        background-color: darken(@blue, 5%);
+    }
+}

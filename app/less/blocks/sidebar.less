@@ -1,0 +1,108 @@
+// main: ../style.less
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: @z-index-sidebar;
+    background-color: @primary;
+    box-shadow: 5px 0px 15px rgba(#050505, 10%);
+    &__content{
+        padding: 0 2rem;
+        margin-top: -5rem;
+    }
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}
+.sidebar__header{
+    height: 180px;
+
+    &-image{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: @secondary;
+    }
+    
+}
+
+.profile{
+
+
+    &__avatar{
+        display:block;
+        width: 100px;
+        height: 100px;
+        border: 2px solid @white;
+        box-shadow: 0 7px 20px rgba(#0000, 25%);
+        border-radius: 50%;
+        margin: 0 auto 2rem;
+        position: relative;
+    }
+    &__name{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    &__prof{
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #dedede;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &__text{
+        text-align: center;
+        font-size: 12px;
+        border-top: 1px solid #1c1c1c;
+        border-bottom: 1px solid #1c1c1c;
+        padding: 3rem 0;
+        margin: 3rem 0;
+    }
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+
+    &__item{
+        margin: 0 .75rem;
+    }
+}
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: 1.1;
+    color: @white;
+    background-color: @secondary;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    padding: 1.1em 2.1em;
+    border-radius: 25px;
+    transition: background-color .2s linear;
+
+    &--red{
+        background-color: #CD251A;
+        box-shadow: 0 7px 17px -10px rgba(#F23F3F, 20%);
+        &:hover{
+            background-color: darken(#CD251A, 5);
+        }
+    }
+    &--blue{
+        background-color: #2A5FE7;
+        box-shadow: 0 7px 17px -10px rgba(2054DB, 35%);
+        &:hover{
+            background-color: darken(#2A5FE7, 5);
+        }
+    }
+}

@@ -1,0 +1,52 @@
+// main: ../style.less
+.main{
+    padding-left: 300px;
+    padding-top:10rem;
+    padding: 10rem 0 8rem 30rem;
+}
+.pag_link{
+    color:@white;
+    text-decoration: none;
+
+}
+.pagination{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-top: 8rem;
+}
+.pag_item{
+    padding: 11px 16px;
+    background-color: #0D0D0D;
+    text-align: center;
+    vertical-align: middle;
+    transition: .3s linear;
+    cursor: pointer;
+
+    &.active{
+        background-color: darken(#104BE3, 5);
+    }
+
+    &:hover{
+        background-color: #104BE3;
+    }
+
+    &+&{
+        margin-left: 10px;
+    }
+}
+
+.send__area{
+    max-width: 19.1rem;
+}
+
+.write__form{
+    padding: 5.9rem 8rem 2.8rem 8rem;
+    z-index: 1000;
+    width: 500px;
+    background-color: @primary;
+    display: none;
+
+}
